@@ -25,7 +25,12 @@
     <div class="container">
         <h1>Service Requests</h1>
         <p>(No Pending Requests)</p>
-        <p>Raise Request? </p>
+    <div class="col-3">
+        <button type="button" class="btn btn-outline-primary">Raise Request?</button>
+    </div>
+        {% for request in service_requests %}
+            {% include 'servicerequests.html' %}
+        {% endfor %}
     </div>
     <div class="container">
         <h1>Plans</h1>
