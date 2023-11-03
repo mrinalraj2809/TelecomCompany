@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Telco Systems</title>
+    {% include 'bootstrap.html' %}
+
+</head>
+<body>
+    {% include 'nav.html' %}
+    <div class="container" align="center">
+        <h4>Login</h4>
+        <form action="login" method="get">
+            <div class="mb-2" >
+                <label>Phone No.</label><br>
+                <input type="number" name="phone" placeholder="9194876235" align="center"/>
+            </div>
+            <a href="{{url_for('home')}}" type="submit" name="login" class="btn btn-outline-primary">Submit</a>
+        </form>
+    </div>
+    {% include 'footer.html' %}
+</body>

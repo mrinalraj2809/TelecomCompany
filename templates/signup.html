@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Telco Systems</title>
+    {% include 'bootstrap.html' %}
+
+</head>
+<body>
+    {% include 'nav.html' %}
+    <div class="container" align="center">
+        <h4>Sign Up</h4>
+        <form action="/signup" method="post">
+            <div class="mb-2">
+                <label>First Name</label><br>
+                <input type="text" name="first_name" placeholder="Bruce"/>
+            </div>
+            <div class="mb-2">
+                <label>Last Name</label><br>
+                <input type="text" name="first_name" placeholder="Wayne"/>
+            </div>
+            <div class="mb-2">
+                <label>Email</label><br>
+                <input type="email" name="email" placeholder="reach.bruce_wayne@gmail.com"/>
+            </div>
+            <div class="mb-2">
+                <label>Phone No.</label><br>
+                <input type="number" name="phone" placeholder="9194876235"/>
+            </div>
+            <div class="mb-2">
+                <label>Address</label><br>
+                <textarea type="text" name="address" placeholder="California, USA"></textarea>
+            </div>
+            <a href="{{url_for('login')}}" type="submit" name="submit" class="btn btn-outline-primary">Submit</a>
+        </form>
+    </div>
+    {% include 'footer.html' %}
+</body>
